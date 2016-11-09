@@ -1,0 +1,16 @@
+Go Links
+<br>
+
+<table>
+{{ range . }}
+<tr>
+	<td><a href="/{{.Key}}">{{.Key}}</a></td>
+	<td>{{.Url}}</td>
+	<td>{{.LastUsed}}</td>
+	<td>{{.Count}}</td>
+	<td>
+		<a href="/{{.Key}}/delete">X</a>
+		<a href="/{{.Key}}/add?url={{.Url}}&key={{.Key}}">E</a>
+	</td>
+</tr>
+{{end}}
